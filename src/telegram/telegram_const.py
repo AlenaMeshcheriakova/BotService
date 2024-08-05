@@ -94,5 +94,5 @@ class TelegramConstant(metaclass=MetaTelegramConstant):
 
     # Language
     CHANGE_LANGUAGE = "Хотите сменить язык?"
-    CHANGED_TO_EU = "Язык изменен на EU"
+    CHANGED_TO_EN = "Язык изменен на EN"
     CHANGED_TO_RU = "Язык изменен на RU"

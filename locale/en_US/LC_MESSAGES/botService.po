@@ -1,7 +1,5 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST ALENA MESHCHERIAKOVA, 2024.
+# TRANSLATION FOR telegram_const
+# ALENA MESHCHERIAKOVA, 2024
 #
 #, fuzzy
 msgid ""
@@ -63,7 +61,7 @@ msgstr "Hooray! You have successfully finished adding words! "
 #, python-brace-format
 msgid ""
 "К сожалению, пользователь с именем {username} не зарегистрирован, "
-"пожалуйста, зарегистрируйтесь с помощью кщманды/registration"
+"пожалуйста, зарегистрируйтесь с помощью команды/registration"
 msgstr ""
 
 #: src/telegram/telegram_const.py:36

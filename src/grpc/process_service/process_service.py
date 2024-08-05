@@ -67,6 +67,7 @@ class ProcessService:
 
 
 def main():
+    # TODO: CLEAN IT!
     # res = ProcessService.start_learning_process('alenaMeshcheriakova', WordTypeEnum.custom)
 
     learning_set = ProcessService.get_learning_set('alenaMeshcheriakova', WordTypeEnum.custom)
