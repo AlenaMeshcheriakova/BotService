@@ -1,0 +1,175 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST ALENA MESHCHERIAKOVA, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version:VERSION 1\n"
+"POT-Creation-Date: 2024-07-23 19:09+0200\n"
+"Last-Translator: ALENA MESHCHERIAKOVA\n"
+"Language: ENGLISH\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/telegram/telegram_const.py:13
+msgid "Перевод"
+msgstr "Translation"
+
+#: src/telegram/telegram_const.py:14
+msgid "Помню"
+msgstr "I KNOW"
+
+#: src/telegram/telegram_const.py:15
+msgid "НЕ помню"
+msgstr "I DON'T KNOW"
+
+#: src/telegram/telegram_const.py:23
+msgid "Поздравляю! Вы успешно закончили практику! Давайте потренируемся еще! /start"
+msgstr "Congratulations! You have successfully completed the practice! Let's practice more! /start"
+
+#: src/telegram/telegram_const.py:24
+msgid "Ура! Вы были успешно зарегистрированы!"
+msgstr "Hooray! You have been successfully registered!"
+
+#: src/telegram/telegram_const.py:25
+msgid ""
+"Упс, кажется вы неверно ввели слово, которое хотите добавить. Пожалуйста, "
+"введите его в следующем формате: \"german word\"-\"russian translation-"
+"\"english translation(optional)\""
+msgstr "Oops, it looks like you entered the word incorrectly. "
+        "Please enter it in the following format: "
+        "\"german word\"-\"russian translation-\"english translation(optional)\""
+
+
+#: src/telegram/telegram_const.py:27
+msgid "Ура! Вы успешно добавили слово! Продолжайте! Введите следующее слова в "
+"формате: \"german word\"-\"russian translation-\"english "
+"translation(optional)\"Если хотите вернуться к обучению введите /stop_add"
+msgstr "Hooray! You have successfully added the word! Keep going! Enter the next word in the format:"
+        " \"german word\"-\"russian translation-\"english translation(optional)\" "
+        "If you want to return to training, enter /stop_add"
+
+
+#: src/telegram/telegram_const.py:30
+msgid "Ура! Вы успешно закончили добавление слов! "
+       "Вы можете вернуться к обучению! /start"
+msgstr "Hooray! You have successfully finished adding words! "
+        "You can return to training! /start"
+
+#: src/telegram/telegram_const.py:34
+#, python-brace-format
+msgid ""
+"К сожалению, пользователь с именем {username} не зарегистрирован, "
+"пожалуйста, зарегистрируйтесь с помощью кщманды/registration"
+msgstr ""
+
+#: src/telegram/telegram_const.py:36
+msgid ""
+"Напишите слово, которое хотите добавить на обучение в следующем формате "
+"\"german word\"-\"russian translation-\"english translation(optional)\""
+msgstr "Write the word you want to train in the following format:"
+"\"German word\"-\"Russian translation-\"English translation(optional)\""
+
+#: src/telegram/telegram_const.py:40
+msgid ""
+"ВАУ! Кажется вы все выучили! Пожалуйста, добавьте новые слова /add_words или "
+"начните сначала /start"
+msgstr ""
+"WOW! It looks like you’ve learned everything! "
+ "Please add new words /add_words or start over /start"
+
+#: src/telegram/telegram_const.py:41
+#, python-brace-format
+msgid ""
+"Привет! Давай потренируемся вместе.\n"
+"{currentAmount}/{totalAmount}. Помнишь ли ты слово {current_word}"
+msgstr ""
+"Hello! Let's practice together.\n"
+"{currentAmount}/{totalAmount}. Do you remember the word {current_word}?"
+
+#: src/telegram/telegram_const.py:42
+#, python-brace-format
+msgid ""
+"{currentAmount}/{totalAmount}. Текущее слово {current_word} \n"
+"Перевод - {word_translation}"
+msgstr ""
+"{currentAmount}/{totalAmount}. The current word is {current_word} \n"
+"Translation - {word_translation}"
+
+#: src/telegram/telegram_const.py:43
+#, python-brace-format
+msgid "{currentAmount}/{totalAmount}. Помнишь ли ты слово {new_word}?"
+msgstr "{currentAmount}/{totalAmount}. Do you remember the word {new_word}?"
+
+
+#: src/telegram/telegram_const.py:46
+msgid ""
+"Здравствуйте! Давайте потренируем ваш немецкий вместе!\n"
+" Для этого, вам необходимо зарегистрироваться, пожалуйста, введите вашу почту"
+msgstr ""
+"Hello! Let's practice your German together!\n"
+"For this, you need to register, please enter your email"
+
+#: src/telegram/telegram_const.py:48
+msgid ""
+"Упс, кажется почта была введена неверно. Подалуйста, попробуйте "
+"зарегистрироваться снова! "
+msgstr ""
+"Oops, it seems the email was entered incorrectly. Please try to register again!"
+
+#: src/telegram/telegram_const.py:51
+msgid "Вот список всех возможных команд:"
+msgstr "Here are all possible actions:"
+
+#: src/telegram/telegram_const.py:53
+msgid "Начать обучение."
+msgstr "Start learning set."
+
+#: src/telegram/telegram_const.py:54
+msgid "Получить список всех доступных команд."
+msgstr "Get a list of available commands."
+
+#: src/telegram/telegram_const.py:55
+msgid "Зарегистрироваться."
+msgstr "Start registration process."
+
+#: src/telegram/telegram_const.py:56
+msgid "Добавить новые слова."
+msgstr "Add new words for learning."
+
+#: src/telegram/telegram_const.py:57
+msgid "Закончить процесс добавления слов."
+msgstr "Stop adding new words process."
+
+msgid "Вы уже зарегистрированы в системе! Вы можете приступить к обучению! /start"
+msgstr "You are already registered in the system! You can start training! /start"
+
+msgid "Хотите сменить язык?"
+msgstr "Do you want to change Language?"
+
+msgid "Язык изменен на EU"
+msgstr "Language changed to EU"
+
+msgid "Язык изменен на RU"
+msgstr "Language changed to RU"
+
+msgid "Сменить язык"
+msgstr "Change language"
+
+msgid "Ура! Вы успешно закончили добавление слов! Ура,вы можете вернуться к обучению! /start"
+msgstr "Hooray! You have successfully finished adding words! Hooray, you can get back to studying! /start"
+
+msgid "Длина тренировочного сета была успешно изменена."
+msgstr "The length of the training set has been successfully changed."
+
+msgid "Изменить длину изучающего сета"
+msgstr "Change the length of the training Set"
+
+msgid "Выбрать уровень языка, для стандартной тренировки"
+msgstr "Choose language level for standard training"
+
+msgid "Возникла ошибка обработки значения. Значение должно быть числом, больше 0."
+msgstr "An error occurred while processing the value. The value must be a number greater than 0."

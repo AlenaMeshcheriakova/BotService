@@ -1,0 +1,175 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST ALENA MESHCHERIAKOVA, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION 1 \n"
+"POT-Creation-Date: 2024-07-23 19:09+0200\n"
+"Last-Translator: ALENA MESCHERIAKOVA\n"
+"Language: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/telegram/telegram_const.py:13
+msgid "Перевод"
+msgstr "Перевод"
+
+#: src/telegram/telegram_const.py:14
+msgid "Помню"
+msgstr "Помню"
+
+#: src/telegram/telegram_const.py:15
+msgid "НЕ помню"
+msgstr "НЕ помню"
+
+#: src/telegram/telegram_const.py:23
+msgid "Поздравляю! Вы успешно закончили практику! Давайте потренируемся еще! /start"
+msgstr "Поздравляю! Вы успешно закончили практику! Давайте потренируемся еще! /start"
+
+#: src/telegram/telegram_const.py:24
+msgid "Ура! Вы были успешно зарегистрированы!"
+msgstr "Ура! Вы были успешно зарегистрированы!"
+
+#: src/telegram/telegram_const.py:25
+msgid ""
+"Упс, кажется вы неверно ввели слово, которое хотите добавить. Пожалуйста, "
+"введите его в следующем формате: \"german word\"-\"russian translation-"
+"\"english translation(optional)\""
+msgstr ""
+"Упс, кажется вы неверно ввели слово, которое хотите добавить. Пожалуйста, "
+"введите его в следующем формате: \"german word\"-\"russian translation-"
+"\"english translation(optional)\""
+
+#: src/telegram/telegram_const.py:27
+msgid ""
+"Ура! Вы успешно добавили слово! Продолжайте! Введите следующее слова в "
+"формате: \"german word\"-\"russian translation-\"english "
+"translation(optional)\"Если хотите вернуться к обучению введите /stop_add"
+msgstr ""
+"Ура! Вы успешно добавили слово! Продолжайте! Введите следующее слова в "
+"формате: \"german word\"-\"russian translation-\"english "
+"translation(optional)\"Если хотите вернуться к обучению введите /stop_add"
+
+#: src/telegram/telegram_const.py:30
+msgid "Ура! Вы успешно закончили добавление слов! Ура,вы можете вернуться к обучению! /start"
+msgstr "Ура! Вы успешно закончили добавление слов! Ура,вы можете вернуться к обучению! /start"
+
+#: src/telegram/telegram_const.py:34
+#, python-brace-format
+msgid ""
+"К сожалению, пользователь с именем {username} не зарегистрирован, "
+"пожалуйста, зарегистрируйтесь с помощью кщманды/registration"
+msgstr ""
+"К сожалению, пользователь с именем {username} не зарегистрирован, "
+"пожалуйста, зарегистрируйтесь с помощью кщманды/registration"
+
+#: src/telegram/telegram_const.py:36
+msgid ""
+"Напишите слово, которое хотите добавить на обучение в следующем формате "
+"\"german word\"-\"russian translation-\"english translation(optional)\""
+msgstr ""
+"Напишите слово, которое хотите добавить на обучение в следующем формате "
+"\"german word\"-\"russian translation-\"english translation(optional)\""
+
+#: src/telegram/telegram_const.py:40
+msgid ""
+"ВАУ! Кажется вы все выучили! Пожалуйста, добавьте новые слова /add_words или "
+"начните сначала /start"
+msgstr ""
+"ВАУ! Кажется вы все выучили! Пожалуйста, добавьте новые слова /add_words или "
+"начните сначала /start"
+
+#: src/telegram/telegram_const.py:41
+#, python-brace-format
+msgid ""
+"Привет! Давай потренируемся вместе.\n"
+"{currentAmount}/{totalAmount}. Помнишь ли ты слово {current_word}"
+msgstr ""
+"Привет! Давай потренируемся вместе.\n"
+"{currentAmount}/{totalAmount}. Помнишь ли ты слово {current_word}"
+
+#: src/telegram/telegram_const.py:42
+#, python-brace-format
+msgid ""
+"{currentAmount}/{totalAmount}. Текущее слово {current_word} \n"
+"Перевод - {word_translation}"
+msgstr ""
+"{currentAmount}/{totalAmount}. Текущее слово {current_word} \n"
+"Перевод - {word_translation}"
+
+#: src/telegram/telegram_const.py:43
+#, python-brace-format
+msgid "{currentAmount}/{totalAmount}. Помнишь ли ты слово {new_word}?"
+msgstr "{currentAmount}/{totalAmount}. Помнишь ли ты слово {new_word}?"
+
+#: src/telegram/telegram_const.py:46
+msgid ""
+"Здравствуйте! Давайте потренируем ваш немецкий вместе!\n"
+" Для этого, вам необходимо зарегистрироваться, пожалуйста, введите вашу почту"
+msgstr ""
+"Здравствуйте! Давайте потренируем ваш немецкий вместе!\n"
+" Для этого, вам необходимо зарегистрироваться, пожалуйста, введите вашу почту"
+
+#: src/telegram/telegram_const.py:48
+msgid ""
+"Упс, кажется почта была введена неверно. Подалуйста, попробуйте "
+"зарегистрироваться снова! "
+msgstr ""
+"Упс, кажется почта была введена неверно. Подалуйста, попробуйте "
+"зарегистрироваться снова! "
+
+#: src/telegram/telegram_const.py:51
+msgid "Вот список всех возможных команд:"
+msgstr "Вот список всех возможных команд:"
+
+#: src/telegram/telegram_const.py:53
+msgid "Начать обучение."
+msgstr "Начать обучение."
+
+#: src/telegram/telegram_const.py:54
+msgid "Получить список всех доступных команд."
+msgstr "Получить список всех доступных команд."
+
+#: src/telegram/telegram_const.py:55
+msgid "Зарегистрироваться."
+msgstr "Зарегистрироваться."
+
+#: src/telegram/telegram_const.py:56
+msgid "Добавить новые слова."
+msgstr "Добавить новые слова."
+
+#: src/telegram/telegram_const.py:57
+msgid "Закончить процесс добавления слов."
+msgstr "Закончить процесс добавления слов."
+
+msgid "Вы уже зарегистрированы в системе! Вы можете приступить к обучению! /start"
+msgstr "Вы уже зарегистрированы в системе! Вы можете приступить к обучению! /start"
+
+
+msgid "Хотите сменить язык?"
+msgstr "Хотите сменить язык?"
+
+msgid "Язык изменен на EU"
+msgstr "Язык изменен на EU"
+
+msgid "Язык изменен на RU"
+msgstr "Язык изменен на RU"
+
+msgid "Сменить язык"
+msgstr "Сменить язык"
+
+msgid "Длина тренировочного сета была успешно изменена."
+msgstr "Длина тренировочного сета была успешно изменена."
+
+msgid "Изменить длину изучающего сета"
+msgstr "Изменить длину изучающего сета"
+
+msgid "Выбрать уровень языка, для стандартной тренировки"
+msgstr "Выбрать уровень языка, для стандартной тренировки"
+
+msgid "Возникла ошибка обработки значения. Значение должно быть числом, больше 0."
+msgstr "Возникла ошибка обработки значения. Значение должно быть числом, больше 0."

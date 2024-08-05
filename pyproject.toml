@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "bot service"
+version = "0.1.0"
+description = "Service for communication with user via telegram"
+authors = ["Alena Meshcheriakova"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytelegrambotapi = "^4.21.0"
+logger = "^1.4"
+telebot = "^0.0.5"
+python-gettext = "^5.0"
+pydantic = {extras = ["email"], version = "^2.8.2"}
+python-dotenv = "^1.0.1"
+pydantic-settings = "^2.4.0"
+grpcio = "^1.65.2"
+grpcio-tools = "^1.65.2"
+pytest = "^8.3.2"
+pytest-dotenv = "^0.5.2"
+pytest-mock = "^3.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
