@@ -1,5 +1,6 @@
 import uuid
 
+from cfg.сonfig import settings
 from src.dto.schema import UserCreateTelegramDTO, UserCreateFullDTO
 from src.grpc.mapping_helper import convert_proto_to_pydantic
 from src.grpc.user_service import user_service_pb2
@@ -8,8 +9,7 @@ from src.log.logger import log_decorator, CustomLogger
 
 class UserService:
 
-    # TODO: Place it to env settings
-    server_address = 'localhost:50051'  # Replace with your gRPC server address
+    server_address = settings.get_GRPC_conn
 
     @staticmethod
     @log_decorator(my_logger=CustomLogger())
@@ -99,8 +99,7 @@ class UserService:
             stub.create_user(request)
 
 def main():
-    res = UserService.get_user_by_name('newGrpcUser')
-    print(res)
+    pass
 
 if __name__ == '__main__':
     main()

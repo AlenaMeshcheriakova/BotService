@@ -1,6 +1,7 @@
 import uuid
 from typing import List
 
+from cfg.сonfig import settings
 from src.dto.schema import WordGetDTO, WordAddDTO
 from src.grpc.mapping_helper import pydantic_to_protobuf
 from src.grpc.word_service import word_service_pb2
@@ -9,11 +10,9 @@ from src.log.logger import CustomLogger, log_decorator
 from src.model.level_enum import LevelEnum
 from src.model.word_type_enum import WordTypeEnum
 
-
 class WordService:
 
-    # TODO: Place it to env settings
-    server_address = 'localhost:50051'  # Replace with your gRPC server address
+    server_address = settings.get_GRPC_conn
 
     @staticmethod
     @log_decorator(my_logger=CustomLogger())
@@ -63,23 +62,6 @@ class WordService:
             return response
 
 def main():
-
-    # dto = WordAddDTO(
-    #     user_id= uuid.UUID("c8117038-7efd-4ca9-b48d-b4698a6170ed"),
-    #     german_word = "zusätzlich",
-    #     english_word= "additionally",
-    #     russian_word = "кроме того",
-    #     amount_already_know=0,
-    #     amount_back_to_learning=0,
-    #     lang_level_id=uuid.UUID("2f74b3a2-3cc8-4bd9-a35b-146ff427c0a8"),
-    #     word_type_id=uuid.UUID("1038e8a7-9d2b-41e0-a3be-fb9139ac4c85"),
-    #     group_id=uuid.UUID("a2a034ac-aa6e-4526-bad7-0e6cce7031fd")
-    # )
-    # res = WordService.add_new_word("alenaMeshcheriakova", "zusätzlich", "additionally", "кроме того",
-    #                                0, 0, "test_group",
-    #                                LevelEnum.b1, WordTypeEnum.custom)
-    #
-    # print(res)
     pass
 
 if __name__ == '__main__':
