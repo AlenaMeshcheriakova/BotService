@@ -1,7 +1,7 @@
 import uuid
 
 from cfg.сonfig import settings
-from src.dto.schema import UserCreateTelegramDTO, UserCreateFullDTO
+from src.dto.schema import UserCreateTelegramDTO, UserCreateFullDTO, UserAuthTelegramDTO
 from src.grpc.mapping_helper import convert_proto_to_pydantic
 from src.grpc.user_service import user_service_pb2
 from src.grpc.user_service.client_user_manager import GRPCClientUserManager
@@ -71,7 +71,7 @@ class UserService:
 
     @staticmethod
     @log_decorator(my_logger=CustomLogger())
-    def create_user_by_DTO(new_user: UserCreateTelegramDTO) -> None:
+    def create_user_by_DTO(new_user: UserAuthTelegramDTO) -> None:
         with GRPCClientUserManager(UserService.server_address) as user_manager:
             stub = user_manager.get_stub()
             request = user_service_pb2.UserCreateTelegramDTORequest(
@@ -82,19 +82,19 @@ class UserService:
                 hashed_password=new_user.hashed_password,
                 email=new_user.email
             )
-            response = stub.create_user_by_DTO(request)
+            stub.create_user_by_DTO(request)
 
     @staticmethod
     @log_decorator(my_logger=CustomLogger())
-    def create_user(name: str, email: str, password: str, telegram_id: str, training_length: int = 10) -> None:
+    def create_user(name: str, email: str, password: str, telegram_user_id: str, training_length: int = 10) -> None:
         with GRPCClientUserManager(UserService.server_address) as user_manager:
             stub = user_manager.get_stub()
             request = user_service_pb2.UserRequest(
-                name=name,
-                email=email,
-                password=password,
-                telegram_id=telegram_id,
-                training_length=training_length
+                name=str(name),
+                training_length=training_length,
+                password=str(password),
+                email=str(email),
+                telegram_user_id=str(telegram_user_id)
             )
             stub.create_user(request)
 

@@ -10,7 +10,6 @@ from src.model.word_type_enum import WordTypeEnum
 #---------------------User---------------------
 
 class UserDTO(BaseModel):
-    # id: uuid.UUID
     user_name: str = Field(max_length=35)
     training_length: int = Field(ge=0)
     created_at: datetime
@@ -30,23 +29,22 @@ class UserCreateTelegramDTO(BaseModel):
     id: uuid.UUID
     user_name: str = Field(max_length=35)
     training_length: int = Field(ge=0)
-    telegram_user_id: str = Field(max_length=35)
-    hashed_password: Optional[str] = None
-    email: Optional[EmailStr] = None
+
+class UserAuthTelegramDTO(BaseModel):
+    id: uuid.UUID
+    auth_user_id: Optional[uuid.UUID]
+    user_name: str = Field(max_length=35)
+    training_length: int = Field(ge=0)
+    password: str
+    email: EmailStr
+    telegram_user_id: str
 
 class UserCreateFullDTO(BaseModel):
     id: uuid.UUID
     user_name: str = Field(max_length=35)
-    telegram_user_id: str = Field(max_length=35)
     training_length: int = Field(ge=0)
     created_at: datetime
     updated_at: datetime
-    password: Optional[str] = None
-    hashed_password: Optional[str] = None
-    email: Optional[EmailStr] = None
-    is_active: Optional[bool] = None
-    is_superuser: Optional[bool] = None
-    is_verified: Optional[bool] = None
 
 #---------------------Word---------------------
 class WordAddDTO(BaseModel):
