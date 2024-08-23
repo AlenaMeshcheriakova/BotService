@@ -5,3 +5,4 @@
 /cfg/development/docker/
 *.pyc
 __pycache__/
+.idea
