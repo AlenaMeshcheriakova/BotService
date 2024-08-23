@@ -1,4 +1,7 @@
-/.test.env
-/.env
+/cfg/testing/.test.env
+/cfg/development/.env
 /log/
 /.venv/
+/cfg/development/docker/
+*.pyc
+__pycache__/

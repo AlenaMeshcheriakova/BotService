@@ -10,7 +10,7 @@ from src.telegram.handlers.telegram_state import TelegramStates
 
 # Custom logger
 logger = CustomLogger().get_logger(__name__)
-def register_handlers(bot):
+def register_haxndlers(bot):
 
     @bot.message_handler(commands=['registration'])
     @log_decorator(my_logger=CustomLogger())
