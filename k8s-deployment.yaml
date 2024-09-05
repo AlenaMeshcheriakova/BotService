@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bot-service-deployment
+  labels:
+    app: bot-service-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bot-service-app
+  template:
+    metadata:
+      labels:
+        app: bot-service-app
+    spec:
+      containers:
+      - name: bot-service-container
+        image: europe-central2-docker.pkg.dev/telegrambot-433510/telegram-docker-repo/bot-service-image:latest
+        ports:
+        - containerPort: 50051
+        env:
+        - name: MODE
+          valueFrom:
+            secretKeyRef:
+              name: bot-secrets
+              key: MODE
+        - name: BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: bot-secrets
+              key: BOT_TOKEN
+        - name: GRPC_HOST
+          valueFrom:
+            secretKeyRef:
+              name: bot-secrets
+              key: GRPC_HOST
+        - name: GRPC_PORT
+          valueFrom:
+            secretKeyRef:
+              name: bot-secrets
+              key: GRPC_PORT
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bot-service
+spec:
+  selector:
+    app: bot-service-app
+  ports:
+    - protocol: TCP
+      port: 50051
+      targetPort: 50051
+  type: ClusterIP

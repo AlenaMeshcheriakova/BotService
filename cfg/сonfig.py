@@ -13,8 +13,7 @@ class Settings(BaseSettings):
     def get_GRPC_conn(self)-> str:
         return f"{self.GRPC_HOST}:{str(self.GRPC_PORT)}"
 
+    # model_config = SettingsConfigDict(env_file="../../cfg/development/.env")
 
-    model_config = SettingsConfigDict(env_file="../.env")
-
-load_dotenv()
+# load_dotenv()
 settings = Settings()
