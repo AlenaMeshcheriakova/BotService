@@ -1,6 +1,6 @@
 from functools import wraps
 
-from src.log.logger import CustomLogger
+from src.log.logger import logger
 
 def get_default_logger():
     return
@@ -9,7 +9,6 @@ def telegram_error_handling(_func=None, bot = None):
     def decorator_err(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
-            logger = CustomLogger().get_logger()
             args_repr = [repr(a) for a in args]
             kwargs_repr = [f"{k}={v!r}" for k, v in kwargs.items()]
             try:

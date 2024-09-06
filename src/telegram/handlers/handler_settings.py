@@ -1,14 +1,11 @@
 from src.grpc.user_service.user_service import UserService
-from src.log.logger import log_decorator, CustomLogger
+from src.log.logger import log_decorator, logger
 
 from src.telegram.gettext_setup import active_translation
 from src.telegram.handlers.custom_keyboards import hide_keyboard, generate_language_keyboard
 from src.telegram.handlers.telegram_state import TelegramStates
 from src.telegram.telegram_decorator import telegram_error_handling
 from src.telegram.telegram_const import TelegramConstant
-
-# Custom logger
-logger = CustomLogger().get_logger(__name__)
 
 def generate_menu() -> str:
     """
@@ -35,7 +32,7 @@ def generate_settings() -> str:
 
 def register_handlers(bot):
     @bot.message_handler(commands=['/', 'help'])
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     @telegram_error_handling(bot = bot)
     def send_settings(message):
         """
@@ -48,7 +45,7 @@ def register_handlers(bot):
         logger.debug(f"To ChatId: {message.chat.id} was sent message: {response_str} ")
 
     @bot.message_handler(commands=['settings'])
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     @telegram_error_handling(bot = bot)
     def send_settings(message):
         """
@@ -61,7 +58,7 @@ def register_handlers(bot):
         logger.debug(f"To ChatId: {message.chat.id} was sent message: {response_str} ")
 
     @bot.message_handler(commands=['change_training_length'])
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     @telegram_error_handling(bot = bot)
     def ask_new_training_length(message):
         """
@@ -75,7 +72,7 @@ def register_handlers(bot):
         logger.debug(f"To ChatId: {message.chat.id} was sent message: {response_str} ")
 
     @bot.message_handler(state=TelegramStates.training_length)
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     @telegram_error_handling(bot = bot)
     def get_chat_id(message):
         """
@@ -119,7 +116,7 @@ def register_handlers(bot):
         logger.debug(f"To ChatId: {message.chat.id} was sent message: {response_str} ")
 
     @bot.message_handler(commands=['language'])
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     @telegram_error_handling(bot = bot)
     def change_language(message):
         """
@@ -132,7 +129,7 @@ def register_handlers(bot):
         logger.debug(f"To ChatId: {message.chat.id} was sent message: {response_str} ")
 
     @bot.message_handler(commands=['en'])
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     @telegram_error_handling(bot = bot)
     def change_language_eu(message):
         """
@@ -146,7 +143,7 @@ def register_handlers(bot):
         logger.debug(f"To ChatId: {message.chat.id} was sent message: {response_str} ")
 
     @bot.message_handler(commands=['ru'])
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     @telegram_error_handling(bot = bot)
     def change_language_ru(message):
         """

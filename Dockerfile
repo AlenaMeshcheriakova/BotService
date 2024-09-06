@@ -70,4 +70,4 @@ WORKDIR /app
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "python src/telegram/main_bot.py"]
+CMD ["sh", "-c", "main_bot.py"]

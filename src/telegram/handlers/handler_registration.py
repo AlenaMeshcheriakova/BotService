@@ -1,19 +1,17 @@
 import re
 
 from src.grpc.user_service.user_service import UserService
-from src.log.logger import CustomLogger, log_decorator
+from src.log.logger import logger, log_decorator
 
 from src.telegram.handlers.custom_keyboards import hide_keyboard
 from src.telegram.telegram_decorator import telegram_error_handling
 from src.telegram.telegram_const import TelegramConstant
 from src.telegram.handlers.telegram_state import TelegramStates
 
-# Custom logger
-logger = CustomLogger().get_logger(__name__)
 def register_handlers(bot):
 
     @bot.message_handler(commands=['registration'])
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     @telegram_error_handling(bot = bot)
     def create_login_pass(message):
         """
@@ -34,7 +32,7 @@ def register_handlers(bot):
             bot.set_state(message.from_user.id, TelegramStates.e_mail, message.chat.id)
 
     @bot.message_handler(state=TelegramStates.e_mail)
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     @telegram_error_handling(bot = bot)
     def message_reply_email(message):
         """

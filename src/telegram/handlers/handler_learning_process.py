@@ -2,8 +2,7 @@ from telebot import formatting
 
 from src.grpc.process_service.process_service import ProcessService
 from src.grpc.user_service.user_service import UserService
-from src.log.logger import CustomLogger, log_decorator
-
+from src.log.logger import logger, log_decorator
 
 from src.model.user_action_enum import UserActionEnum
 from src.model.word_type_enum import WordTypeEnum
@@ -14,15 +13,11 @@ from src.telegram.handlers.telegram_state import TelegramStates
 from src.telegram.telegram_decorator import telegram_error_handling
 from src.telegram.telegram_const import TelegramConstant
 
-
-# Custom logger
-logger = CustomLogger().get_logger(__name__)
-
 def register_handlers(bot):
 
     # ------------------LEARNING WITH STANDARD WORDS------------------
     @bot.message_handler(commands=['start','learn_standard_words'])
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     # @telegram_error_handling(bot = bot)
     def start_standard_words(message):
         """
@@ -34,7 +29,7 @@ def register_handlers(bot):
         start_learning_process(message, WordTypeEnum.standard)
 
     @bot.message_handler(state=TelegramStates.standard_learning_process)
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     # @telegram_error_handling(bot = bot)
     def standard_learning_process(message):
         """
@@ -47,7 +42,7 @@ def register_handlers(bot):
 
     # ------------------LEARNING WITH CUSTOM WORDS------------------
     @bot.message_handler(commands=['learn_user_words'])
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     # @telegram_error_handling(bot = bot)
     def start_learning_user_words(message):
         """
@@ -60,7 +55,7 @@ def register_handlers(bot):
         start_learning_process(message, WordTypeEnum.custom)
 
     @bot.message_handler(state=TelegramStates.custom_learning_process)
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     # @telegram_error_handling(bot = bot)
     def custom_learning_process(message):
         """

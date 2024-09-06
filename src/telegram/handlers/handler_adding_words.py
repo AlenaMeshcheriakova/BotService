@@ -4,7 +4,7 @@ from telebot import formatting
 
 from src.grpc.user_service.user_service import UserService
 from src.grpc.word_service.word_service import WordService
-from src.log.logger import CustomLogger, log_decorator
+from src.log.logger import logger, log_decorator
 
 
 from src.telegram.handlers.custom_keyboards import hide_keyboard
@@ -37,7 +37,7 @@ def register_handlers(bot):
             bot.set_state(message.from_user.id, TelegramStates.add_words, message.chat.id)
 
     @bot.message_handler(commands=['stop_add'])
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     @telegram_error_handling(bot = bot)
     def stop_adding_words_process(message):
         """
@@ -51,7 +51,7 @@ def register_handlers(bot):
         bot.delete_state(message.from_user.id, message.chat.id)
 
     @bot.message_handler(state=TelegramStates.add_words)
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     @telegram_error_handling(bot = bot)
     def add_word(message):
         """

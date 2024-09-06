@@ -1,4 +1,3 @@
-
 from cfg.сonfig import settings
 
 # telebot - library pyTelegramBotAPI
@@ -8,7 +7,7 @@ import telebot
 from telebot import custom_filters
 from telebot.storage import StateMemoryStorage
 
-from src.log.logger import CustomLogger
+from src.log.logger import logger
 from src.telegram.gettext_setup import active_translation
 
 # Initialisation telegram storage
@@ -37,8 +36,6 @@ if __name__ == "__main__":
     setup_handlers()
 
     # Initialize custom logger
-    logger_instance = CustomLogger()
-    logger = logger_instance.get_logger(__name__)
     logger.info("Bot is starting...")
 
     bot.add_custom_filter(custom_filters.StateFilter(bot))
