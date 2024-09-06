@@ -13,12 +13,10 @@ from src.telegram.handlers.telegram_state import TelegramStates
 from src.telegram.telegram_decorator import telegram_error_handling
 from src.telegram.telegram_const import TelegramConstant
 
-# Custom logger
-logger = CustomLogger().get_logger(__name__)
 
 def register_handlers(bot):
     @bot.message_handler(commands=['add_words'])
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     @telegram_error_handling(bot = bot)
     def add_words_process(message):
         """

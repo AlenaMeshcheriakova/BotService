@@ -103,7 +103,7 @@ def register_handlers(bot):
 
 
     @bot.message_handler(commands=['get_chat_id'])
-    @log_decorator(my_logger=CustomLogger())
+    @log_decorator(my_logger=logger)
     @telegram_error_handling(bot = bot)
     def get_chat_id(message):
         """
