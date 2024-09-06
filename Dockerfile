@@ -70,4 +70,4 @@ WORKDIR /app
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "main_bot.py"]
+CMD ["sh", "-c", "python main_bot.py"]
